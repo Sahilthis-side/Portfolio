@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="main-content">
+        <nav>
+            <div class="menu">
+                <img src="logo.png" alt="">
+                <p><a href="">Home</a></p>
+                <p><a href="">Projects</a></p>
+                <p><a href="">Resume</a></p>
+                <p class="last"><a href="#" onclick="openPopup2()">Contact</a></p>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="textcontent">
+                <div class="hello">Hello, It's Me</div>
+                <div class="name">Sahil Sharma</div>
+                <div class="job">
+                    <span class="ms">And I'm a</span>
+                    <div class="jobanm">
+                        <span id="jobTitle" class="job1 one">Designer</span>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button onclick="openPopup()">About Me</button>
+                </div>
+            </div>
+            <div class="imagecontent"><img src="pr.png" alt=""></div>
+        </div>
+        <div class="socialmedia">
+            <div><a href="https://facebook.com" target="_blank"><img src="fb.png" alt=""></a></div>
+            <div><a href="https://www.instagram.com/__.sahil._.sharma.__/" target="_blank"><img src="ig.png" alt=""></a></div>
+            <div><a href="https://linkedin.com/in/sahilthis-side" target="_blank"><img src="lk.png" alt="" class="lk"></a></div>
+            <div><a href="https://github.com/Sahilthis-side" target="_blank"><img src="gt.png" alt="" class="gt"></a></div>
+            <br>
+        </div>
+    </div>
+    <div class="mssg">Designed with ❤️</div>
+    <!-- Popup Window -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <div class="close-btn" onclick="closePopup()">&times;</div>
+            <div class="abtmssg">
+                <h2>About Me</h2>
+                <p class = "first">
+                    Hey there! 👋 I'm Sahil Sharma, a passionate BCA student at Birla Institute of Technology who has a
+                    love affair with technology. Currently on a mission to become a Full Stack Wizard 🧙‍♂️, I find joy
+                    in unraveling the mysteries of machine learning, generative AI, and cloud computing. If it's
+                    cutting-edge tech, count me in!
+                </p>
+                <h3>Languages in my toolbox:</h3>
+                <p class = "second">
+                    Python (my spirit animal 🐍), Java (the OG), C++ (because sometimes you need a little more oomph).
+                    Oh, and DSA? I've got that covered too – consider me the Sherlock Holmes of algorithms.
+                </p>
+                <p class = "third">I believe in coding with a side of laughter, so </p>
+                <div class="joke">
+                    <div class="hover-message">I know the joke isn't funny 🫡</div>
+                    <div class="jokemssg">Here's a joke for you <span class="extrammsg">(hover me)</span></div>
+                    <div class="code">
+                        <p class="code1line">def tell_joke():</p>
+                        <p class="code2line">joke = "Why do programmers prefer dark mode? Because light attracts bugs!"</p>
+                        <p class="code3line">return joke</p>
+                        <p class="code4line">print(tell_joke())</p>
+                    </div>
+                </div>
+                <p class = "fourth">When I'm not typing away, you'll find me sipping on tea ☕ and brainstorming my next big project.
+                    I'm all about turning caffeine into code!</p>
+
+                <p class = "fifth">Join me on this coding adventure, where bugs are just happy accidents waiting to be fixed. Let's
+                    build something awesome together! 💻✨</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- form popup -->
+
+    <div id="contactPopup" class="popup">
+        <div class="popup-content">
+            <div class="close-btn" onclick="closeContactPopup()">&times;</div>
+            <div class="container">
+                <div class="content">
+                    <div class="right-content">
+                        <div class="address">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h4 class="headline">Address</h4>
+                            <p class="l1">LIG/R-306</p>
+                            <p class="l2">Harmu Housing colony</p>
+                        </div>
+                        <div class="phone"></div>
+                    </div>
+                    <div class="left-content">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const jobTitleElement = document.getElementById("jobTitle");
+            const jobTitles = ["Designer", "Developer"];
+            let currentIndex = 0;
+
+            function changeJobTitle() {
+                jobTitleElement.textContent = jobTitles[currentIndex];
+                currentIndex = (currentIndex + 1) % jobTitles.length;
+            }
+
+            setInterval(changeJobTitle, 5000);
+        });
+        function openPopup() {
+            document.getElementById("popup").style.display = "block";
+            document.body.style.overflow = "hidden"; // Disable scrolling on the main page
+            document.querySelector(".main-content").classList.add("blurred");
+        }
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+            document.body.style.overflow = "auto"; // Enable scrolling on the main page
+            document.querySelector(".main-content").classList.remove("blurred");
+        }
+        function openPopup2() {
+            document.getElementById("contactPopup").style.display = "block";
+            document.body.style.overflow = "hidden"; // Disable scrolling on the main page
+            document.querySelector(".main-content").classList.add("blurred");
+        }
+        function closeContactPopup() {
+            document.getElementById("contactPopup").style.display = "none";
+            document.body.style.overflow = "auto"; // Enable scrolling on the main page
+            document.querySelector(".main-content").classList.remove("blurred");
+        }
+    </script>
+
+</body>
+
+</html>
