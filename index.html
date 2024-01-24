@@ -83,24 +83,11 @@
 
     <!-- form popup -->
 
-    <div id="contactPopup" class="popup">
-        <div class="popup-content">
-            <div class="close-btn" onclick="closeContactPopup()">&times;</div>
-            <div class="container">
-                <div class="content">
-                    <div class="right-content">
-                        <div class="address">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <h4 class="headline">Address</h4>
-                            <p class="l1">LIG/R-306</p>
-                            <p class="l2">Harmu Housing colony</p>
-                        </div>
-                        <div class="phone"></div>
-                    </div>
-                    <div class="left-content">
+    <div class="popup2" id="popup2">
+        <div class="popup2-content">
+            <div class="close-btn2" onclick="closePopup2()">&times;</div>
+            <div class="contactform">
 
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -128,12 +115,12 @@
             document.querySelector(".main-content").classList.remove("blurred");
         }
         function openPopup2() {
-            document.getElementById("contactPopup").style.display = "block";
+            document.getElementById("popup2").style.display = "block";
             document.body.style.overflow = "hidden"; // Disable scrolling on the main page
             document.querySelector(".main-content").classList.add("blurred");
         }
-        function closeContactPopup() {
-            document.getElementById("contactPopup").style.display = "none";
+        function closePopup2() {
+            document.getElementById("popup2").style.display = "none";
             document.body.style.overflow = "auto"; // Enable scrolling on the main page
             document.querySelector(".main-content").classList.remove("blurred");
         }
