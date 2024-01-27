@@ -24,6 +24,7 @@ body{
 }
 .menu p a{
     color: #ffebbc;
+    margin-top: -2px;
     /* padding-left: 20px; */
     margin-left: 50px;
     padding: 5px;
@@ -53,11 +54,11 @@ body{
     align-items: center;
     justify-content: center;
     /* border-top: 2px solid #36413d; */
-    margin-top: 2px;
+    /* margin-top: 2px; */
     /* margin-bottom: 20px; */
 }
 .socialmedia img {
-    margin-top: 8px;
+    margin-top: 6px;
     width: 30px;
     height: 30px;
     margin: 15px;
