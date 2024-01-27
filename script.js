@@ -68,3 +68,6 @@ function formsubmit(){
         document.querySelector(".mssgfield").value = "";
     }
 }
+function redirectToPage(pageUrl) {
+    window.open(pageUrl, '_blank');
+}
