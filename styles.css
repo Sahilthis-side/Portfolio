@@ -4,7 +4,10 @@
 }
 body{
     /* background-color: #0e192d; */
-    background-image: linear-gradient(to right, #0e192d, #00476b, #007b97, #00b29e, #08e682);
+    background: linear-gradient(to right, #0e192d, #00476b, #007b97, #00b29e, #08e682) no-repeat;
+    background-size: 100% 100%;
+    margin: 0;
+    height: 100vh;
 }
 .menu{
     height: auto;
@@ -37,6 +40,9 @@ body{
     text-decoration: none;
     border: 1px solid black;
     transform: scale(1.1);
+}
+.menulink{
+    display: flex;
 }
 .last{
     padding-right: 50px;
@@ -420,3 +426,4 @@ body{
     padding-right: 10px;
     transition: opacity 3s ease-in-out;
 }
+
