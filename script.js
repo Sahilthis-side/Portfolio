@@ -1,3 +1,19 @@
+function onPageload(){
+    if(screen.width <= 1100){
+        document.getElementById('pagestyle').setAttribute('href','tabstyles.css');
+    }
+    else{
+        document.getElementById('pagestyle').setAttribute('href','styles.css');
+    }
+}
+window.onload = onPageload;
+function openproj(){
+    if(screen.width > 1100){
+        redirectToPage1('projects.html');
+    } else{
+        redirectToPage1('tabprojects.html');
+    }
+}
 document.addEventListener("DOMContentLoaded", function () {
     const jobTitleElement = document.getElementById("jobTitle");
     const jobTitles = ["Designer", "Developer"];
@@ -70,4 +86,7 @@ function formsubmit(){
 }
 function redirectToPage(pageUrl) {
     window.open(pageUrl, '_blank');
+}
+function redirectToPage1(pageUrl) {
+    window.location.href = pageUrl;
 }
