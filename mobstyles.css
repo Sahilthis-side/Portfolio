@@ -228,7 +228,9 @@ body{
     border: 2px solid #ebbf58;
     border-radius: 10px;
     /* display: block; */
+    overflow: scroll;
     width: 350px;
+    height: 700px;
     margin-right: 50px;
 }
 
