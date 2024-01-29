@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width", initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link id = "pagestyle" rel="stylesheet" href="styles.css">
+    <link id = "pagestyle" rel="stylesheet" href="mobstyles.css">
 </head>
-
 <body>
     <div class="main-content">
         <nav>
             <div class="menu">
                 <img src="images/logo.png" alt="">
-                <p><a href="">Home</a></p>
-                <p><a href="#" onclick="openproj()">Projects</a></p>
-                <p><a href="">Resume</a></p>
-                <p class="last"><a href="#" onclick="openPopup2()">Contact</a></p>
+                <div class = "menulinks">
+                    <span><a href="">Home</a></span>
+                    <span><a href="#" onclick="openproj()">Projects</a></span>
+                    <span><a href="">Resume</a></span>
+                    <span class="last"><a href="#" onclick="openPopup2()">Contact</a></>
+                </div>
             </div>
         </nav>
         <div class="content">
@@ -36,7 +36,7 @@
             <div class="imagecontent"><img src="images/pr.png" alt=""></div>
         </div>
         <div class="socialmedia">
-            <div><a href="https://facebook.com" target="_blank"><img src="images/fb.png" alt=""></a></div>
+            <div><a href="https://facebook.com" target="_blank" class = "fb"><img src="images/fb.png" alt=""></a></div>
             <div><a href="https://www.instagram.com/__.sahil._.sharma.__/" target="_blank"><img src="images/ig.png" alt=""></a></div>
             <div><a href="https://linkedin.com/in/sahilthis-side" target="_blank"><img src="images/lk.png" alt="" class="lk"></a></div>
             <div><a href="https://github.com/Sahilthis-side" target="_blank"><img src="images/gt.png" alt="" class="gt"></a></div>
@@ -44,8 +44,7 @@
         </div>
     </div>
     <div class="mssg">Designed with ❤️</div>
-    <!-- Popup Window -->
-    <div id="popup" class="popup">
+        <div id="popup" class="popup">
         <div class="popup-content">
             <div class="close-btn" onclick="closePopup()">&times;</div>
             <div class="abtmssg">
@@ -100,7 +99,5 @@
     </div>
     <script src = "https://smtpjs.com/v3/smtp.js"></script>
     <script src = "script.js"></script>
-
 </body>
-
 </html>
