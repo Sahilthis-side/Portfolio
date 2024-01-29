@@ -1,5 +1,7 @@
 function onPageload(){
-    if(screen.width <= 1100){
+    if(screen.width <= 450){
+        document.getElementById('pagestyle').setAttribute('href','mobstyles.css');
+    }else if(screen.width <= 1100){
         document.getElementById('pagestyle').setAttribute('href','tabstyles.css');
     }
     else{
@@ -8,10 +10,12 @@ function onPageload(){
 }
 window.onload = onPageload;
 function openproj(){
-    if(screen.width > 1100){
+    if(screen.width >= 1100){
         redirectToPage1('projects.html');
-    } else{
+    } else if(screen.width >= 450) {
         redirectToPage1('tabprojects.html');
+    } else{
+        redirectToPage1('mobprojects.html');
     }
 }
 document.addEventListener("DOMContentLoaded", function () {
