@@ -37,7 +37,7 @@ function openPopup() {
 }
 function closePopup() {
     document.getElementById("popup").style.display = "none";
-    document.body.style.overflow = "auto";
+    document.body.style.overflow = "hidden";
     document.querySelector(".main-content").classList.remove("blurred");
 }
 function openPopup2() {
@@ -47,7 +47,7 @@ function openPopup2() {
 }
 function closePopup2() {
     document.getElementById("popup2").style.display = "none";
-    document.body.style.overflow = "auto";
+    document.body.style.overflow = "hidden";
     document.querySelector(".main-content").classList.remove("blurred");
 }
 function formsubmit(){
